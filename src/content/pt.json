@@ -1,0 +1,10 @@
+{
+  "home": {
+    "capital": "Capital",
+    "continent": "Continente",
+    "population": "População",
+    "area": "Área",
+    "currency": "Moeda",
+    "distance": "Distância de"
+  }
+}
