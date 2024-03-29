@@ -29,6 +29,10 @@ export type CountryProps = {
   flags: Flags;
 };
 
+export type CountryRequest = {
+  country: CountryProps
+}
+
 export type RapidAPIResponse = {
   route: {
     greatCircle: number;

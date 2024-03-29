@@ -10,4 +10,13 @@ module.exports = withNextIntl({
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/about',
+        destination: '/',
+        permanent: false,
+      },
+    ]
+  },
 });
