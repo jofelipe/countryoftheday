@@ -1,33 +1,21 @@
 import { getLocale, getTranslations } from 'next-intl/server';
 import { WebPage, WithContext } from 'schema-dts';
 
-
 import getCountry from '@/services/country';
 import { formatCurrency, formatNumber } from '@/utils/formatters';
 import Image from 'next/image';
 
-export async function generateMetadata() {
-  const country = await getCountry()
-  const { name } = country;
-
-  console.log('country', country)
-
-  return {
-    title: name.official,
-    openGraph: {
-      title: `${name.official} is the country of the day`,
+export const metadata = {
+  title: 'Home page',
+  description: 'Discover the country of the day in our amazing page!',
+  openGraph: {
+    title: 'Home page - Country of the Day',
       type: 'website',
-      publishedTime: new Date(),
       authors: ['Jonathan Felipe'],
-    },
-  };
+  }
 }
 
 export default async function Index() {
-  // const headersList = headers();
-  // const userCity = headersList.get(HEADERS.USER_CITY);
-  // const userCountry = headersList.get(HEADERS.USER_COUNTRY);
-
   const country = await getCountry()
   const {
     name,

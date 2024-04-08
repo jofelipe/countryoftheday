@@ -6,7 +6,9 @@ export async function GET() {
   const todayIndex = dayOfYear % COUNTRIES.length;
 
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_REST_COUNTRIES_API_URL}alpha/${COUNTRIES[todayIndex]}`
+    `${process.env.NEXT_PUBLIC_REST_COUNTRIES_API_URL}alpha/${COUNTRIES[todayIndex]}`, {
+      cache: 'no-cache'
+    }
   );
   const data = await res.json()
 

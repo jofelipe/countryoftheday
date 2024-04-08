@@ -14,6 +14,7 @@ export const contentType = 'image/png'
 // Image generation
 export default async function Icon() {
   const country = await getCountry()
+  const isDev = !!process && process.env.NODE_ENV === 'development'
 
   return new ImageResponse(
     (
@@ -28,6 +29,9 @@ export default async function Icon() {
           justifyContent: 'center',
           paddingLeft: 4,
           paddingRight: 4,
+          ...(isDev && {
+            border: '1px solid red',
+          })
         }}
       >
         <img src={country.flags.png} alt={country.translations.por.official} />
