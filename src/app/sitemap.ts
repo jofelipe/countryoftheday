@@ -1,4 +1,3 @@
- 
 export default function sitemap() {
   return [
     {
@@ -11,5 +10,5 @@ export default function sitemap() {
         },
       },
     },
-  ]
+  ];
 }

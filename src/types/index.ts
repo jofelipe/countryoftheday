@@ -30,8 +30,8 @@ export type CountryProps = {
 };
 
 export type CountryRequest = {
-  country: CountryProps
-}
+  country: CountryProps;
+};
 
 export type RapidAPIResponse = {
   route: {

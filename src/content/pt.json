@@ -5,6 +5,7 @@
     "population": "População",
     "area": "Área",
     "currency": "Moeda",
-    "distance": "Distância de"
+    "distance": "Distância de",
+    "loading": "Carregando o país do dia..."
   }
 }

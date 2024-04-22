@@ -1,11 +1,11 @@
-import { CountryRequest } from "@/types";
+import { CountryRequest } from '@/types';
 
 export default async function getCountry() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}api/country`, {
-    cache: 'no-cache'
+    cache: 'no-cache',
   });
 
-  const { country } = (await res.json()) as CountryRequest
+  const { country } = (await res.json()) as CountryRequest;
 
-  return country
+  return country;
 }

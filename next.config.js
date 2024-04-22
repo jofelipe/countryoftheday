@@ -17,6 +17,6 @@ module.exports = withNextIntl({
         destination: '/',
         permanent: false,
       },
-    ]
+    ];
   },
 });
