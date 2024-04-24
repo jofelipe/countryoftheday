@@ -27,6 +27,7 @@ export type CountryProps = {
   population: number;
   continents: string[];
   flags: Flags;
+  coatOfArms: Flags;
 };
 
 export type CountryRequest = {
