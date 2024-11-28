@@ -29,6 +29,9 @@ dependencies:
   schema-dts:
     specifier: ^1.1.2
     version: 1.1.2(typescript@5.4.3)
+  sst:
+    specifier: 3.3.33
+    version: 3.3.33
   tailwind-merge:
     specifier: ^2.3.0
     version: 2.3.0
@@ -658,6 +661,10 @@ packages:
     dependencies:
       possible-typed-array-names: 1.0.0
     dev: true
+
+  /aws4fetch@1.0.20:
+    resolution: {integrity: sha512-/djoAN709iY65ETD6LKCtyyEI04XIBP5xVvfmNxsEP0uJB5tyaGBztSryRr4HqMStr9R06PisQE7m9zDTXKu6g==}
+    dev: false
 
   /axe-core@4.7.0:
     resolution: {integrity: sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==}
@@ -1881,6 +1888,14 @@ packages:
     hasBin: true
     dev: true
 
+  /jose@4.15.9:
+    resolution: {integrity: sha512-1vUQX+IdDMVPj4k8kOxgUqlcK518yluMuGZwqlr44FS1ppZB/5GWh4rZG89erpOBOJjU/OBsnCVFfapsRz6nEA==}
+    dev: false
+
+  /jose@5.2.3:
+    resolution: {integrity: sha512-KUXdbctm1uHVL8BYhnyHkgp3zDX5KW8ZhAKVFEfUbU2P8Alpzjb+48hHvjOdQIyPshoblhzsuqOwEEAbtHVirA==}
+    dev: false
+
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
@@ -1986,7 +2001,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-    dev: true
 
   /merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
@@ -2131,6 +2145,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /object-hash@2.2.0:
+    resolution: {integrity: sha512-gScRMn0bS5fH+IuwyIFgnh9zBdo4DV+6GhygmWM9HyNJSgS0hScp1f5vjtm7oIIOiT9trXrShAkLFSc2IqKNgw==}
+    engines: {node: '>= 6'}
+    dev: false
+
   /object-hash@3.0.0:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
     engines: {node: '>= 6'}
@@ -2201,11 +2220,25 @@ packages:
       es-object-atoms: 1.0.0
     dev: true
 
+  /oidc-token-hash@5.0.3:
+    resolution: {integrity: sha512-IF4PcGgzAr6XXSff26Sk/+P4KZFJVuHAJZj3wgO3vX2bMdNVp/QXTP3P7CEm9V1IdG8lDLY3HhiqpsE/nOwpPw==}
+    engines: {node: ^10.13.0 || >=12.0.0}
+    dev: false
+
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
       wrappy: 1.0.2
     dev: true
+
+  /openid-client@5.6.4:
+    resolution: {integrity: sha512-T1h3B10BRPKfcObdBklX639tVz+xh34O7GjofqrqiAQdm7eHsQ00ih18x6wuJ/E6FxdtS2u3FmUGPDeEcMwzNA==}
+    dependencies:
+      jose: 4.15.9
+      lru-cache: 6.0.0
+      object-hash: 2.2.0
+      oidc-token-hash: 5.0.3
+    dev: false
 
   /optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
@@ -2610,6 +2643,69 @@ packages:
   /source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
+
+  /sst-darwin-arm64@3.3.33:
+    resolution: {integrity: sha512-dg7W+6yHwi6XSpSzcyn350kBzHfI6rGxO5hLLjQslchKC8st4XQxKYVlPYg97aB4AUl9kjx46lOt7WirDOb2iA==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-darwin-x64@3.3.33:
+    resolution: {integrity: sha512-ssgRW/GbSLe0lHuDM0Gb1okF4u4dq43jQYFqpzfMiyFsWhWWkG8QB1871jLTaq21N+NnNTs5GTKoBtzL7/gRzg==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-linux-arm64@3.3.33:
+    resolution: {integrity: sha512-/XWCpfP+NlUSH+w4BZVowseLN8gYyB9MZ5XpQ0HrvEw3iI/xmNtoYJJrZlfpLxvXEmQ8SHlkL0PNJmegg+hdyw==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-linux-x64@3.3.33:
+    resolution: {integrity: sha512-xRwnOgSe6k1DVzWtYFCOV8zyF2oG6zdnODUh4GHZEmlYNOGiyMyu1rZr2wY4keIgbOrkCxjZkTIjHWleOM0t3g==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst-linux-x86@3.3.33:
+    resolution: {integrity: sha512-NdDMZQ2wArVsWb37d0NNAxxyzmNTckZXMxfQA3JsP6SGGWZxcPX7ei9BuOSaBYIuEdgGSqTctyZvQPTHAmRdWA==}
+    cpu: [x86]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /sst@3.3.33:
+    resolution: {integrity: sha512-hiSQxCoVl40RR30c3qRFi62KypRbZnRluTnSLKkICVbLB0x+JcKbbU2wg2fWJpGCvWpDTK0p4V9tWhJYUOIHEg==}
+    hasBin: true
+    peerDependencies:
+      hono: 4.x
+      valibot: 0.30.x
+    peerDependenciesMeta:
+      hono:
+        optional: true
+      valibot:
+        optional: true
+    dependencies:
+      aws4fetch: 1.0.20
+      jose: 5.2.3
+      openid-client: 5.6.4
+    optionalDependencies:
+      sst-darwin-arm64: 3.3.33
+      sst-darwin-x64: 3.3.33
+      sst-linux-arm64: 3.3.33
+      sst-linux-x64: 3.3.33
+      sst-linux-x86: 3.3.33
+    dev: false
 
   /streamsearch@1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
@@ -3024,7 +3120,6 @@ packages:
 
   /yallist@4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-    dev: true
 
   /yaml@2.4.1:
     resolution: {integrity: sha512-pIXzoImaqmfOrL7teGUBt/T7ZDnyeGBWyXQBvOVhLkWLN37GXv8NMLK406UY6dS51JfcQHsmcW5cJ441bHg6Lg==}
